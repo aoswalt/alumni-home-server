@@ -9,7 +9,7 @@ defmodule Alumni.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(Alumni.Repo, []),
+      # supervisor(Alumni.Repo, []),
       # Start the endpoint when the application starts
       supervisor(AlumniWeb.Endpoint, []),
       # Start your own worker by calling: Alumni.Worker.start_link(arg1, arg2, arg3)

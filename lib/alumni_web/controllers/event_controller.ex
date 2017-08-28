@@ -43,7 +43,8 @@ defmodule AlumniWeb.EventController do
       {"assertion", make_jwt()}
     ]}
 
-    HTTPoison.post!(@token_url, body)
+    @token_url
+    |> HTTPoison.post!(body)
     |> Map.get(:body)
     |> Poison.decode!
     |> Map.get("access_token")

@@ -38,6 +38,7 @@ defmodule AlumniWeb.Endpoint do
     key: "_alumni_key",
     signing_salt: "OZX1RsTH"
 
+  plug CORSPlug
   plug AlumniWeb.Router
 
   @doc """

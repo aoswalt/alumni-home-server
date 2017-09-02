@@ -43,7 +43,8 @@ defmodule Alumni.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:httpoison, "~> 0.13"},
-      {:joken, "~> 1.1"}
+      {:joken, "~> 1.1"},
+      {:cors_plug, "~> 1.2"},
     ]
   end
 

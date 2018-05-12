@@ -1,7 +1,7 @@
 defmodule AlumniWeb.EventController do
   use AlumniWeb, :controller
 
-  @calendar_id Application.get_env(:alumni, :calendar_id)
+  @calendar_id Application.get_env(:alumni, :google)[:calendar_id]
   @events_url "https://www.googleapis.com/calendar/v3/calendars/#{@calendar_id}/events?maxResults=5"
 
   @jwt_header_map %{alg: "RS256", typ: "JWT"}
@@ -9,7 +9,7 @@ defmodule AlumniWeb.EventController do
   @jwt_claim_scope "https://www.googleapis.com/auth/calendar.readonly"
   @jwt_claim_aud "https://www.googleapis.com/oauth2/v4/token"
 
-  @private_key Application.get_env(:alumni, :private_key)
+  @private_key Application.get_env(:alumni, :google)[:private_key]
 
   @token_url "https://www.googleapis.com/oauth2/v4/token"
   @token_grant_type "urn:ietf:params:oauth:grant-type:jwt-bearer"

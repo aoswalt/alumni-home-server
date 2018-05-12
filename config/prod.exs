@@ -69,10 +69,6 @@ config :logger, level: :info
 #     config :alumni, AlumniWeb.Endpoint, server: true
 #
 
-config :alumni,
-  calendar_id: System.get_env("CALENDAR_ID"),
-  private_key: System.get_env("PRIVATE_KEY")
-
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
 # import_config "prod.secret.exs"

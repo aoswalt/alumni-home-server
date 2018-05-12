@@ -57,9 +57,4 @@ config :alumni, Alumni.Repo,
   hostname: "localhost",
   pool_size: 10
 
-
-config :alumni,
-  calendar_id: "",
-  private_key: ""
-
 import_config "dev.secret.exs"

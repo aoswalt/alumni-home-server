@@ -5,8 +5,7 @@ defmodule AlumniWeb.UserSocket do
   # channel "room:*", AlumniWeb.RoomChannel
 
   ## Transports
-  transport :websocket, Phoenix.Transports.WebSocket,
-    timeout: 45_000
+  transport(:websocket, Phoenix.Transports.WebSocket, timeout: 45_000)
   # transport :longpoll, Phoenix.Transports.LongPoll
 
   # Socket params are passed from the client and can

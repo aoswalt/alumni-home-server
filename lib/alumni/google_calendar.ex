@@ -2,7 +2,7 @@ defmodule Alumni.GoogleCalendar do
   alias Alumni.Event
 
   @calendar_id Application.get_env(:alumni, :google)[:calendar_id]
-  @events_url "https://www.googleapis.com/calendar/v3/calendars/#{@calendar_id}/events?maxResults=5"
+  @events_url "https://www.googleapis.com/calendar/v3/calendars/#{@calendar_id}/events?maxResults=5&singleEvents=true&orderBy=startTime"
 
   @jwt_claim_iss "alumni-calendar@nss-alumni.iam.gserviceaccount.com"
   @jwt_claim_scope "https://www.googleapis.com/auth/calendar.readonly"
